@@ -1,6 +1,10 @@
 var http = require('http');
 var querystring = require('querystring');
 var utils = require('utils');
+var express = require('express');
+var app = express();
+
+app.set('port', (process.env.PORT || 4000));
 
 http.createServer(function (req, res) {
   // set up some routes
@@ -69,4 +73,6 @@ case '/formhandler':
       res.end('<html><head><title>404 - Not found</title></head><body><h1>Not found.</h1></body></html>');
       console.log("[404] " + req.method + " to " + req.url);
   };
-}).listen();
+}).listen(app.get('port'), function() {
+    console.log('App is runing, server is listening on port %d', app.get('port') );
+});
