@@ -1,7 +1,7 @@
 {
   "name" : "node",
   "version" : "0.12.5",
-  "scripts" ; {
+  "scripts" : {
     "start" : "node ./server.js"
   }, 
   "engine" : {
