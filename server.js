@@ -69,4 +69,4 @@ case '/formhandler':
       res.end('<html><head><title>404 - Not found</title></head><body><h1>Not found.</h1></body></html>');
       console.log("[404] " + req.method + " to " + req.url);
   };
-}).listen(process.env.PORT || 4000);
+}).listen(4000);
